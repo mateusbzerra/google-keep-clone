@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, FlatList, View, StyleSheet } from 'react-native';
+import { Text, FlatList, View, StyleSheet, StatusBar } from 'react-native';
 import api from '../../services/api';
 import Card from '../../components/Card';
 import Bottom from '../../components/Bottom';
@@ -34,6 +34,7 @@ export default class Home extends Component {
 		console.log('state:notes', this.state.notes);
 		return (
 			<View style={styles.container}>
+				<StatusBar barStyle="light-content" />
 				<FlatList
 					data={this.state.notes}
 					numColumns={2}
